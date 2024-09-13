@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Cards with Web Knowledge</title>
+    <style>
+         body{
+    background-image: url(" https://img.freepik.com/free-vector/abstract-metallic-dark-blue-background_52683-17915.jpg");
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size:cover;
+}
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #3d1bb6;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-header {
+            background-color: #ab202b;
+            color: #110df4;
+            padding: 20px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .card-content {
+            padding: 20px;
+            display: none;
+        }
+
+        .card-content p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .card.active .card-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card-container">
+    <div class="card">
+        <div class="card-header">HTML Basics</div>
+        <div class="card-content">
+            <p>HTML stands for HyperText Markup Language. It is used to structure content on the web. Basic elements include <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, and <code>&lt;img&gt;</code>.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">CSS Basics</div>
+        <div class="card-content">
+            <p>CSS stands for Cascading Style Sheets. It is used to style and layout web pages. Common properties include <code>color</code>, <code>background-color</code>, <code>font-size</code>, and <code>margin</code>.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">JavaScript Basics</div>
+        <div class="card-content">
+            <p>JavaScript is a programming language used to create interactive effects on web pages. Basic syntax includes variables (<code>let</code>, <code>const</code>), functions, and control structures (<code>if</code>, <code>for</code>).</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">HTML Tags</div>
+        <div class="card-content">
+            <p>HTML uses tags to define elements. Common tags include <code>&lt;h1&gt;</code> for headings, <code>&lt;p&gt;</code> for paragraphs, and <code>&lt;ul&gt;</code> for unordered lists.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">CSS Selectors</div>
+        <div class="card-content">
+            <p>CSS selectors are used to apply styles to elements. Examples include <code>.class</code> for class selectors, <code>#id</code> for ID selectors, and <code>element</code> for element selectors.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">JavaScript Events</div>
+        <div class="card-content">
+            <p>JavaScript can respond to user interactions through events such as <code>click</code>, <code>mouseover</code>, and <code>keydown</code>. Event listeners can be added using <code>addEventListener()</code>.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">HTML Forms</div>
+        <div class="card-content">
+            <p>HTML forms are used to collect user input. Key elements include <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;button&gt;</code>.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">CSS Flexbox</div>
+        <div class="card-content">
+            <p>CSS Flexbox is a layout model that allows you to design complex layouts with ease. Key properties include <code>display: flex</code>, <code>justify-content</code>, and <code>align-items</code>.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">JavaScript DOM Manipulation</div>
+        <div class="card-content">
+            <p>The Document Object Model (DOM) can be manipulated with JavaScript to change the structure and content of web pages. Methods include <code>getElementById()</code>, <code>querySelector()</code>, and <code>innerHTML</code>.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">HTML Attributes</div>
+        <div class="card-content">
+            <p>HTML attributes provide additional information about an element. Examples include <code>href</code> for links, <code>src</code> for images, and <code>alt</code> for alternative text.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">CSS Box Model</div>
+        <div class="card-content">
+            <p>The CSS Box Model describes the rectangular boxes generated for elements. It includes margins, borders, padding, and content.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">JavaScript Variables</div>
+        <div class="card-content">
+            <p>JavaScript variables are used to store data values. Use <code>let</code> or <code>const</code> to declare variables, and <code>var</code> for older code.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">HTML Media Elements</div>
+        <div class="card-content">
+            <p>HTML media elements include <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> for embedding multimedia content.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('active');
+        });
+    });
+</script>
+
+</body>
+</html>
